@@ -1,0 +1,17 @@
+*.gem
+*.rbc
+.bundle
+.config
+coverage
+pkg
+rdoc
+spec/reports
+test/tmp
+test/version_tmp
+tmp
+*.project
+*.swp
+*.lock
+cache/*
+/config
+.DS_Store

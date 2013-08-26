@@ -1,0 +1,42 @@
+[    
+    {
+        "name" : "Twitter",
+        "url" : "https://twitter.com/settings/notifications"
+    },
+    {
+        "name" : "KLM",
+        "url" : "http://www.klm.com/travel/gb_en/plan_and_book/special_offers/sign_up/unsubscribe.htm"
+    },
+    {
+        "name" : "Facebook",
+        "url" : "https://www.facebook.com/settings?tab=notifications"
+    },
+    {
+        "name" : "Github",
+        "url" : "https://github.com/settings/notifications"
+    },
+    {
+        "name" : "Adobe",
+        "url" : "http://www.adobe.com/uk/services/channelnewsletter/unsubscribe.html"
+    },
+    {
+        "name" : "eBay (UK)",
+        "url" : "http://my.ebay.co.uk/ws/eBayISAPI.dll?MyEbayBeta&&CurrentPage=MyeBayNextNotificationPreferences&guest=1"
+    },
+    {
+        "name" : "RedBubble",
+        "url" : "https://www.redbubble.com/account/settings"
+    },
+    {
+        "name" : "LinkedIn",
+        "url" : "https://www.linkedin.com/job/home?trk=rj_optout"
+    },
+    {
+        "name" : "Amazon Local (UK)",
+        "url" : "https://local.amazon.co.uk/account?openid.assoc_handle=amzn_local_uk"
+    },
+    {
+        "name" : "Packt Publishing",
+        "url" : "https://www.packtpub.com/account"
+    }
+]
