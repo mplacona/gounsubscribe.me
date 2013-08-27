@@ -23,7 +23,7 @@ json_text.each do |item|
 
     haml +=<<-EOF
     %div.span5
-        %h2
+        %h2{:id =>"#{item["name"]}"}
             #{item["name"]}
         %p
             %input{:type=>"text", :class=>"js-url-field", :value=>"#{item["url"]}", :readonly=>"readonly"}
