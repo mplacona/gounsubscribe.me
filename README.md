@@ -16,3 +16,11 @@ The URL's are stored on the file urls.json. I want it to be easy for you to cont
 ## Disclaimer
 The design sucks and I know it, but I'd rather leave it to the creativity of a colaborator.
 This is a colaboration project, so the more the merrier, so let put this to work and add more functionalities
+
+## Demo
+![gif](http://raw.github.com/mplacona/gounsubscribe.me/master/public/images/gounsubscribe.gif)
+
+## Acknowledgements
+The original idea for this project came to me after seeing [justdelete.me](http://justdelete.me), which I thought was simple and cool.
+
+I didn't want to simply make a copy of it, as there would just be no point, so thought I'd create something that would work similarly... but in a different way :-)
