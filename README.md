@@ -18,7 +18,7 @@ The design sucks and I know it, but I'd rather leave it to the creativity of a c
 This is a colaboration project, so the more the merrier, so let put this to work and add more functionalities
 
 ## Demo
-![gif](http://raw.github.com/mplacona/gounsubscribe.me/master/public/images/gounsubscribe.gif)
+![gif](https://raw.github.com/mplacona/gounsubscribe.me/master/public/images/gounsubscribe.gif)
 
 ## Acknowledgements
 The original idea for this project came to me after seeing [justdelete.me](http://justdelete.me), which I thought was simple and cool.
