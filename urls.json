@@ -38,5 +38,10 @@
     {
         "name" : "Packt Publishing",
         "url" : "https://www.packtpub.com/account"
+    },
+    {
+        "name" : "Crucial",
+        "url" : "https://www.crucial.com/uk/mysite/newsletterunsubscribe.aspx"
     }
+
 ]
