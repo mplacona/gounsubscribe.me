@@ -1,6 +1,10 @@
 !!!
 %html{:lang => "en"}
   %head
+    :javascript
+      function search() {
+        location.href="#"+String(document.getElementById("siteName").value).toLowerCase().replace(/[^ a-z0-9]/g, '').replace(/\s+/, '-');
+      }
     %meta{:charset => "utf-8"}/
     %title GoUnsubscribe.me
     %meta{:content => "Various links for unsubscribing from internet services", :name => "description"}/
@@ -17,6 +21,9 @@
             %ul{:class => "nav"}
               %li
                 %a{:class => "active", :href => "/"} Home
+              %li
+                %input{:type => "text", :id => "siteName"}
+                %input{:type => "button", :value => "Search", :onclick => "search();"}
       
       %div.container
         %div.hero-unit
