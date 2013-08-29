@@ -26,7 +26,7 @@
             %ul{:class => "nav"}
               %li
                 %a{:class => "active", :href => "/"} Home
-              %li
+              %li{:style => "padding-top:5px;"}
                 %input{:type => "text", :id => "siteName"}
                 %input{:type => "button", :value => "Search", :onclick => "search();"}
       
@@ -58,14 +58,15 @@
             ga('create', 'UA-43498910-1', 'gounsubscribe.me');
             ga('send', 'pageview');
 
-          //#{request.base_url}
           openLink = function(link){
             window.open(link);  
           }
           var websites = []
           var elements = document.getElementsByTagName("h2");
-          for (var i = 0; i < elements.length; i++) websites.push(elements[i].innerText);
-          alert(websites);
+          for (var i = 0; i < elements.length; i++){
+            websites.push(elements[i].innerText);
+          }
+
           $( "#siteName" ).autocomplete({
             source: websites,
             delay: 0
