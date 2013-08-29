@@ -1,14 +1,9 @@
 !!!
 %html{:lang => "en"}
   %head
-    :javascript
-      function search() {
-        location.href="#"+String(document.getElementById("siteName").value).toLowerCase().replace(/[^ a-z0-9]/g, '').replace(/\s+/, '-');
-      }
-
     %meta{:charset => "utf-8"}/
-    %title GoUnsubscribe.me
-    %meta{:content => "Various links for unsubscribing from internet services", :name => "description"}/
+    %title GoUnsubscribe.me | Free yourself from newsletters and spam
+    %meta{:content => "A directory of direct links to unsubscribe yourself from newsletters and spam sent by companies and websites. Simply look up for a service that has been spamming you, and get a direct link to update your preferences and remove yourself from it.", :name => "description"}/
     %meta{:content => "Marcos Placona", :name => "author"}/
 
     %link{:href => "/styles/bootstrap.min.css", :rel => "stylesheet"}/
@@ -57,6 +52,10 @@
 
             ga('create', 'UA-43498910-1', 'gounsubscribe.me');
             ga('send', 'pageview');
+
+          function search() {
+            location.href="#"+String(document.getElementById("siteName").value).toLowerCase().replace(/[^ a-z0-9]/g, '').replace(/\s+/, '-');
+          }
 
           openLink = function(link){
             window.open(link);  
