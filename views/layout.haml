@@ -37,6 +37,11 @@
           %b unsubscribe 
           from a bunch of online services and keep your inbox 
           %b spam free
+        
+        %div{:class => "fb-like","data-href" => "http://www.gounsubscribe.me","data-width" => "400", "data-layout"=>"button_count", "data-show-faces" => "false","data-send" => "false"}
+        %div{:class => "g-plusone", "data-size" => "medium"}  
+        %a{:href => "https://twitter.com/share",:class => "twitter-share-button", "data-via" => "marcos_placona", "data-hashtags" => "gounsubscribe"} Tweet
+       
 
       #content
         =yield
@@ -48,5 +53,6 @@
           2013
           | 
           %a{:href => "https://github.com/mplacona/gounsubscribe.me", :target => "_blank", :title => "Fork me on GitHub"} Fork me on GitHub
-      
+
+      %div{:id=>"fb-root"}
       %script{:type => "text/javascript", :src => "/scripts/site.js"}
