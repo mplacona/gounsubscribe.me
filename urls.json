@@ -42,6 +42,45 @@
     {
         "name" : "Crucial",
         "url" : "https://www.crucial.com/uk/mysite/newsletterunsubscribe.aspx"
+    },
+    {
+        "name" : "Quora",
+        "url" : "https://www.quora.com/settings/preferences"
+    },
+    {
+        "name" : "Udacity",
+        "url" : "https://www.udacity.com/account/settings#!/account"
+    },
+    {
+        "name" : "StumbleUpon",
+        "url" : "https://www.stumbleupon.com/settings/notifications"
+    },
+    {
+        "name" : "Meetup",
+        "url" : "http://www.meetup.com/account/comm/"
+    },
+    {
+        "name" : "Sony Playstation (EU)",
+        "url" : "https://secure.eu.playstation.com/psn/mypsn/account/"
+    },
+    {
+        "name" : "Slideshare",
+        "url" : "http://www.slideshare.net/MarcosPlacona/update_email_preferences"
+    },
+    {
+        "name" : "Google Groups",
+        "url" : "https://groups.google.com/forum/#!usersettings/general"
+    },
+    {
+        "name" : "Google Analytics",
+        "url" : "https://www.google.com/analytics/web/?hl=en&pli=1#management/UserSettings/"
+    },
+    {
+        "name" : "Google Adsense",
+        "url" : "https://www.google.com/adsense/app#account"
+    },
+    {
+        "name" : "VMWare",
+        "url" : "https://my.vmware.com/group/vmware/profile?p_p_id=myProfilePortlet_WAR_itusermanagement&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&p_p_col_id=column-3&p_p_col_count=1&_myProfilePortlet_WAR_itusermanagement_action=communicationDetails"
     }
-
 ]
