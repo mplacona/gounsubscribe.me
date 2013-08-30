@@ -6,7 +6,7 @@
     ga('send', 'pageview');
 
 function search() {
-    location.href="#"+String(document.getElementById("siteName").value).toLowerCase().replace(/[^ a-z0-9]/g, '').replace(/\s+/, '-');
+    location.href="#"+String(document.getElementById("siteName").value).toLowerCase().replace(/[^ a-z0-9]/g, '').replace(/\s+/g, '-');
 }
 
 openLink = function(link){

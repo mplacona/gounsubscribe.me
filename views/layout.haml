@@ -6,6 +6,7 @@
     %meta{:name => "description", :content => "Unsubscribe yourself from newsletters and spam sent to you. Simply look up for a service that has been spamming you, and get a direct link to update your preferences and remove yourself from it."}/
     %meta{:name => "author", :content => "Marcos Placona"}/
     %meta{:name => "keywords", :content => "unsubscribe, spam, internet email, email unsubscribe, newsletter, newsletter unsubscribe"}/
+    %meta{:name => "viewport", :content => "width=device-width,initial-scale=1"}/
 
 
     %link{:href => "/styles/bootstrap.min.css", :rel => "stylesheet"}/
@@ -32,15 +33,18 @@
         %h1
           Go Unsubscribe.me
         %p
-          A handful list of links to help you quickly unsubscribe from a bunch of online services and keep your inbox spam free
+          A handful list of links to help you quickly 
+          %b unsubscribe 
+          from a bunch of online services and keep your inbox 
+          %b spam free
 
       #content
         =yield
 
       %footer
-        %p
-          &copy; 
-          %a{:href => "http://www.placona.co.uk", :target => "_blank", :title => "Marcos Placona"} Marcos Placona
+        %p{:class => "vcard"}
+          &copy;
+          %a{:href => "http://www.placona.co.uk", :target => "_blank", :title => "Marcos Placona", :class=>"fn"} Marcos Placona
           2013
           | 
           %a{:href => "https://github.com/mplacona/gounsubscribe.me", :target => "_blank", :title => "Fork me on GitHub"} Fork me on GitHub
