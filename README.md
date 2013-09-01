@@ -10,9 +10,10 @@ The URL's are stored on the file urls.json. I want it to be easy for you to cont
 - `url`: The url where you would go if you were unsubscribing from a website
 
 1. Fork this repository, add one site detail at a time to `urls.json`
-2. Run `ruby generator.rb`
-3. Check by running `ruby application.rb`
-4. Commit and make a pull request
+2. Run `bundle install`
+3. Run `ruby generator.rb`
+4. Check by running `ruby application.rb`
+5. Commit and make a pull request
 
 ## Disclaimer
 The design sucks and I know it, but I'd rather leave it to the creativity of a colaborator.
