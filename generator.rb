@@ -23,7 +23,7 @@ json_text.each do |item|
 
     haml +=<<-EOF
     %div.span5
-		  %a{:name =>"#{item["name"].downcase.gsub(/[^ 0-9a-z]/, '').gsub(/\s+/, '-')}", :class => "anchor"}
+        %a{:name =>"#{item["name"].downcase.gsub(/[^ 0-9a-z]/, '').gsub(/\s+/, '-')}", :class => "anchor"}
         %h2
 
             #{item["name"]}
