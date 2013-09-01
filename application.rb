@@ -3,8 +3,9 @@ require 'json'
 require 'haml'
 require 'sinatra/base'
 require 'sinatra/assetpack'
+require 'sinatra'
 
-class GoUnsubscribeMe < Sinatra::Base
+class Application < Sinatra::Base
     set :root, File.dirname(__FILE__)
     register Sinatra::AssetPack
 
@@ -34,4 +35,6 @@ class GoUnsubscribeMe < Sinatra::Base
     not_found do
         haml :'404'
     end
+
+    run! if app_file == $0
 end
