@@ -1,2 +1,3 @@
 require './application'
-run Sinatra::Application
+use Rack::Deflater
+run GoUnsubscribeMe.new

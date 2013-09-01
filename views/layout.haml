@@ -8,12 +8,11 @@
     %meta{:name => "keywords", :content => "unsubscribe, spam, internet email, email unsubscribe, newsletter, newsletter unsubscribe"}/
     %meta{:name => "viewport", :content => "width=device-width,initial-scale=1"}/
 
-
-    %link{:href => "/styles/bootstrap.min.css", :rel => "stylesheet"}/
+    != css :application, :rel => 'stylesheet'
     %link{:href => "/images/favicon.ico", :type => "image/x-icon", :rel => "shortcut icon"}/
-    %link{:rel => "stylesheet", :href => "http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"}
+    %link{:rel => "stylesheet", :href => "http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css"}
 
-  %body{:style => "padding-top: 60px"}     
+  %body     
     %div.topbar
       %div.fill
         %div.container
@@ -21,7 +20,7 @@
           %ul{:class => "nav"}
             %li
               %a{:class => "active", :href => "/"} Home
-            %li{:style => "padding-top:5px;"}
+            %li{:class => "search-form"}
               %input{:type => "text", :id => "siteName"}
               %input{:type => "button", :value => "Search", :onclick => "search();"}
     
@@ -55,4 +54,4 @@
 
       %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"}
       %script{:src => "//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"}
-      %script{:type => "text/javascript", :src => "/scripts/site.js"}
+      != js :app

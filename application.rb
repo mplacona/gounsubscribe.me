@@ -1,16 +1,37 @@
 require 'rubygems'
-require 'sinatra'
 require 'json'
 require 'haml'
+require 'sinatra/base'
+require 'sinatra/assetpack'
 
-configure do
-      set :views, "#{File.dirname(__FILE__)}/views"
-end
+class GoUnsubscribeMe < Sinatra::Base
+    set :root, File.dirname(__FILE__)
+    register Sinatra::AssetPack
 
-get '/' do
-  haml :index
-end
+    configure do
+        set :views, "#{File.dirname(__FILE__)}/views"
+    end
 
-not_found do
-  haml :'404'
+    
+    assets {
+        js :app, '/js/app.js', [
+            '/js/*.js'
+        ]
+        
+        css :application, '/css/application.css', [
+            '/css/*.css',
+            '/css/vendor/*.css'
+        ]
+
+        js_compression  :jsmin
+        css_compression :simple
+    }
+
+    get '/' do
+        haml :index
+    end
+
+    not_found do
+        haml :'404'
+    end
 end
