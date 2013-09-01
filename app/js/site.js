@@ -17,13 +17,15 @@ window.___gcfg = {lang: 'en-GB'};
 })();
 
 // Facebook
-(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
-    fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
+(function() {
+    var fb1 = document.createElement('script');
+    fb1.type = 'text/javascript';
+    fb1.async = true;
+    fb1.src = 'http://connect.facebook.net/en_GB/all.js#xfbml=1', 'facebook-jssdk';
+    var fb2 = document.getElementsByTagName('script')[0];
+    fb2.parentNode.insertBefore(fb1, fb2);
+})();
+
 
 // Twitter
 (function() {
@@ -35,13 +37,6 @@ window.___gcfg = {lang: 'en-GB'};
     s.parentNode.insertBefore(twitterScriptTag, s);
 })();
 
-
-!function(d,s,id){
-var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
-if(!d.getElementById(id)){js=d.createElement(s);js.id=id;
-js.src=p+'://platform.twitter.com/widgets.js';
-fjs.parentNode.insertBefore(js,fjs);}}
-(document, 'script', 'twitter-wjs');
 
 // Rest of the site
 function search() {
