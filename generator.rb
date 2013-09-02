@@ -7,6 +7,7 @@ jsonConfig = "urls.json"
 counter = 0
 haml = ""
 json_text = JSON.parse(IO.read(jsonConfig))
+sorted_object = json_text.sort_by {|e| e["name"].downcase}    
 
 def doRow
     <<-EOF
@@ -15,7 +16,7 @@ def doRow
 end
 
 haml += doRow
-json_text.each do |item|
+sorted_object.each do |item|
     if counter > 2
         haml += doRow
         counter = 0

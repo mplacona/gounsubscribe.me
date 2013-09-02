@@ -82,5 +82,9 @@
     {
         "name" : "VMWare",
         "url" : "https://my.vmware.com/group/vmware/profile?p_p_id=myProfilePortlet_WAR_itusermanagement&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&p_p_col_id=column-3&p_p_col_count=1&_myProfilePortlet_WAR_itusermanagement_action=communicationDetails"
+    },
+    {
+        "name" : "Code School",
+        "url" : "https://www.codeschool.com/account/edit/"
     }
 ]
