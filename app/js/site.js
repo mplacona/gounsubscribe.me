@@ -55,5 +55,10 @@ for (var i = 0; i < elements.length; i++){
 
 $( "#siteName" ).autocomplete({
     source: websites,
-    delay: 0
+    delay: 0,
+    select: function (event, ui) { search() },
+}).keydown(function(e){
+    if (e.keyCode === 13){
+        search();
+    }
 });
