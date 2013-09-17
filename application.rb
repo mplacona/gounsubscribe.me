@@ -16,12 +16,15 @@ class Application < Sinatra::Base
     
     assets {
         js :app, '/js/app.js', [
+            '/js/vendor/jquery.js',
+            '/js/vendor/*.js',
             '/js/*.js'
         ]
         
         css :application, '/css/application.css', [
-            '/css/*.css',
-            '/css/vendor/*.css'
+            '/css/vendor/*.css',
+            '/css/*.css'
+           
         ]
 
         js_compression  :jsmin

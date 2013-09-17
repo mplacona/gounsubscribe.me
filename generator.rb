@@ -4,35 +4,22 @@ require 'json'
 jsonConfig = "urls.json"
 
 # Open JSON file for parsing
-counter = 0
 haml = ""
 json_text = JSON.parse(IO.read(jsonConfig))
 sorted_object = json_text.sort_by {|e| e["name"].downcase}    
 
-def doRow
-    <<-EOF
-%div.row
-    EOF
-end
-
-haml += doRow
 sorted_object.each do |item|
-    if counter > 2
-        haml += doRow
-        counter = 0
-    end
-
     haml +=<<-EOF
-    %div.span5
-        %a{:name =>"#{item["name"].downcase.gsub(/[^ 0-9a-z]/, '').gsub(/\s+/, '-')}", :class => "anchor"}
-        %h2
-
-            #{item["name"]}
-        %p
-            %input{:type=>"text", :class=>"js-url-field", :value=>"#{item["url"]}", :readonly=>"readonly"}
-            %button{:type=>"button", :onclick => "openLink('#{item["url"]}')"} open
+%div{:class=>"col-12 col-sm-6 col-lg-4"}
+    %a{:name =>"#{item["name"].downcase.gsub(/[^ 0-9a-z]/, '').gsub(/\s+/, '-')}", :class => "anchor"}
+    %h2
+        #{item["name"]}
+    %p
+        
+        %div{:class=>"col-lg-9"}
+            %input{:type=>"text", :class=>"form-control", :id=>"disabledInput", :value=>"#{item["url"]}", :disabled=>"disabled"}
+        %button{:type=>"button", :onclick => "openLink('#{item["url"]}')", :class=>"btn btn-default"} open
     EOF
-    counter+=1
 end
 indexFile = "views/index.haml"
 if File.exist?(indexFile)

@@ -1,57 +1,69 @@
 !!!
 %html{:lang => "en"}
+  %meta{:charset => "utf-8"}/
   %head
-    %meta{:charset => "utf-8"}/
     %title GoUnsubscribe.me | Free yourself from newsletters and spam
     %meta{:name => "description", :content => "Unsubscribe yourself from newsletters and spam sent to you. Simply look up for a service that has been spamming you, and get a direct link to update your preferences and remove yourself from it."}/
     %meta{:name => "author", :content => "Marcos Placona"}/
     %meta{:name => "keywords", :content => "unsubscribe, spam, internet email, email unsubscribe, newsletter, newsletter unsubscribe"}/
     %meta{:name => "viewport", :content => "width=device-width,initial-scale=1"}/
 
+    %link{:href => "http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css", :rel => "stylesheet"}/
     != css :application, :rel => 'stylesheet'
-    %link{:href => "/images/favicon.ico", :type => "image/x-icon", :rel => "shortcut icon"}/
-    %link{:rel => "stylesheet", :href => "http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css"}
 
-  %body     
-    %div.topbar
-      %div.fill
-        %div.container
-          %a{:class => "brand", :href => "/"} Go Unsubscribe.me
-          %ul{:class => "nav"}
+    %link{:href => "/images/favicon.ico", :type => "image/x-icon", :rel => "shortcut icon"}/
+  
+  %body
+    %div{:class=>"navbar navbar-fixed-top navbar-inverse", :role=>"navigation"}
+      %div{:class=>"container"}
+        %div{:class=>"navbar-header"}
+          %button{:type=>"button", :class=>"navbar-toggle", "data-toggle"=>"collapse", "data-target"=>".navbar-collapse"}
+            %span{:class=>"icon-bar"}
+            %span{:class=>"icon-bar"}
+            %span{:class=>"icon-bar"}
+          %a{:class => "navbar-brand", :href => "/"} Go Unsubscribe.me
+        %div{:class=>"collapse navbar-collapse"}
+          %ul{:class=>"nav navbar-nav"}
+            %li{:class=>"active"}
+              %a{:href=>"/"} Home
             %li
-              %a{:class => "active", :href => "/"} Home
-            %li{:class => "search-form"}
-              %input{:type => "text", :id => "siteName"}
-              %input{:type => "button", :value => "Search", :onclick => "search();"}
-    
-    %div.container
-      %div.hero-unit
-        %h1
-          Go Unsubscribe.me
-        %p
-          A handful list of links to help you quickly 
-          %b unsubscribe 
-          from a bunch of online services and keep your inbox 
-          %b spam free
-        
-        %div{:class => "fb-like","data-href" => "http://www.gounsubscribe.me","data-width" => "400", "data-layout"=>"button_count", "data-show-faces" => "false","data-send" => "false"}
-        %div{:class => "g-plusone", "data-size" => "medium"}  
-        %a{:href => "https://twitter.com/share",:class => "twitter-share-button", "data-via" => "marcos_placona", "data-hashtags" => "gounsubscribe"} Tweet
+              %a{:href=>"/about"} About
+            %li
+              %a{:href=>"/contact"} Contact
+          %form{:class=>"navbar-form navbar-left",:role=>"search"}
+            %div{:class=>"form-group"}
+              %input{:type => "text", :id => "siteName", :class=>"form-control"}
+            %input{:type => "button", :value => "Search", :onclick => "search();", :class=>"btn btn-default"}
+      
+    %div{:class=>"container"}
+      %div{:class=>"row row-offcanvas row-offcanvas-right"}
+        %div{:class=>"col-md-12 col-md-9"}
+          %div{:class=>"jumbotron"}
+            %h1
+              Go Unsubscribe.me
+            %p
+              A handful list of links to help you quickly
+              %b unsubscribe
+              from a bunch of online services and keep your inbox
+              %b spam free
+
+            %div{:class => "fb-like","data-href" => "http://www.gounsubscribe.me","data-width" => "400", "data-layout"=>"button_count", "data-show-faces" => "false","data-send" => "false"}
+            %div{:class => "g-plusone", "data-size" => "medium"}  
+            %a{:href => "https://twitter.com/share",:class => "twitter-share-button", "data-via" => "marcos_placona", "data-hashtags" => "gounsubscribe"} Tweet
        
 
-      #content
-        =yield
+      =yield
 
-      %footer
-        %p{:class => "vcard"}
-          &copy;
-          %a{:href => "http://www.placona.co.uk", :target => "_blank", :title => "Marcos Placona", :class=>"fn"} Marcos Placona
-          2013
-          | 
-          %a{:href => "https://github.com/mplacona/gounsubscribe.me", :target => "_blank", :title => "Fork me on GitHub"} Fork me on GitHub
+    %hr
 
-      %div{:id=>"fb-root"}
-
-      %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"}
-      %script{:src => "//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"}
-      != js :app
+    %footer
+      %p{:class => "vcard"}
+        &copy;
+        %a{:href => "http://www.placona.co.uk", :target => "_blank", :title => "Marcos Placona", :class=>"fn"} Marcos Placona
+        2013
+        | 
+        %a{:href => "https://github.com/mplacona/gounsubscribe.me", :target => "_blank", :title => "Fork me on GitHub"} Fork me on GitHub
+    
+    %div{:id=>"fb-root"}
+    != js :app
+  
