@@ -11,8 +11,7 @@ sorted_object = json_text.sort_by {|e| e["name"].downcase}
 sorted_object.each do |item|
     haml +=<<-EOF
 %div{:class=>"col-12 col-sm-6 col-lg-4"}
-    %a{:name =>"#{item["name"].downcase.gsub(/[^ 0-9a-z]/, '').gsub(/\s+/, '-')}", :class => "anchor"}
-    %h2
+    %h2{:id=>"#{item["name"].downcase.gsub(/[^ 0-9a-z]/, '').gsub(/\s+/, '-')}"}
         #{item["name"]}
     %p
         

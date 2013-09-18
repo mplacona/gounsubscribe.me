@@ -48,10 +48,14 @@ footer {
   }
   
   /* override autocomplete's z-index */
+
+  #siteName {
+    z-index: 10000;
+    position: relative;
+  }
   .ui-autocomplete {
-    position:absolute;
-    cursor:default;
-    z-index:4000 !important;
-    z-index:4000;
+    z-index: 9999 !important;
+    -webkit-box-shadow: 0 0 3px 3px #888;
+    box-shadow: 0 0 3px 3px #888;
   }
 }
