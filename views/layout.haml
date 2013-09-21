@@ -23,12 +23,12 @@
           %a{:class => "navbar-brand", :href => "/"} Go Unsubscribe.me
         %div{:class=>"collapse navbar-collapse"}
           %ul{:class=>"nav navbar-nav"}
-            %li{:class=>"active"}
-              %a{:href=>"/"} Home
             %li
-              %a{:href=>"/about"} About
+              %a{:href=>"/", :"data-toggle"=>"pill"} Home
             %li
-              %a{:href=>"/contact"} Contact
+              %a{:href=>"/about", :"data-toggle"=>"pill"} About
+            %li
+              %a{:href=>"/contact", :"data-toggle"=>"pill"} Contact
           %form{:class=>"navbar-form navbar-left",:role=>"search"}
             %div{:class=>"form-group"}
               %input{:type => "text", :id => "siteName", :class=>"form-control"}
@@ -48,7 +48,8 @@
 
             %div{:class => "fb-like","data-href" => "http://www.gounsubscribe.me","data-width" => "400", "data-layout"=>"button_count", "data-show-faces" => "false","data-send" => "false"}
             %div{:class => "g-plusone", "data-size" => "medium"}  
-            %a{:href => "https://twitter.com/share",:class => "twitter-share-button", "data-via" => "marcos_placona", "data-hashtags" => "gounsubscribe"} Tweet
+              %a{:href => "https://twitter.com/share",:class => "twitter-share-button", "data-via" => "marcos_placona", "data-hashtags" => "gounsubscribe"} Tweet
+
        
 
       =yield

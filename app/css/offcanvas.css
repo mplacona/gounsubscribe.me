@@ -46,16 +46,23 @@ footer {
     top: 0;
     width: 50%; /* 6 columns */
   }
-  
-  /* override autocomplete's z-index */
+}  
 
-  #siteName {
-    z-index: 10000;
-    position: relative;
-  }
-  .ui-autocomplete {
-    z-index: 9999 !important;
-    -webkit-box-shadow: 0 0 3px 3px #888;
-    box-shadow: 0 0 3px 3px #888;
-  }
+/* override autocomplete's z-index */
+
+.form-group {
+  z-index: 10000;
+  position: relative;
 }
+.ui-autocomplete {
+  z-index: 9999 !important;
+  -webkit-box-shadow: 0 0 3px 3px #888;
+  box-shadow: 0 0 3px 3px #888;
+}
+
+/* override padding on jumbotron*/
+.jumbotron{
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+}
+

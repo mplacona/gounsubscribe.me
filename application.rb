@@ -35,6 +35,10 @@ class Application < Sinatra::Base
         haml :index
     end
 
+    get '/about' do
+        haml :about
+    end
+
     not_found do
         haml :'404'
     end

@@ -37,6 +37,13 @@ window.___gcfg = {lang: 'en-GB'};
     s.parentNode.insertBefore(twitterScriptTag, s);
 })();
 
+// menu
+(function(){
+    var url = window.location;
+    $('ul.nav a').filter(function() {
+        return this.href == url;
+    }).parent().addClass('active');
+})();
 
 // Rest of the site
 function search() {
