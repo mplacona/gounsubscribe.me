@@ -11,7 +11,7 @@
     != css :application, :rel => 'stylesheet'
 
     %link{:href => "/images/favicon.ico", :type => "image/x-icon", :rel => "shortcut icon"}/
-    
+    %link{:href => "//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css",:rel => "stylesheet"} 
   %body
     %div{:class=>"navbar navbar-fixed-top navbar-inverse", :role=>"navigation"}
       %div{:class=>"container"}
@@ -22,13 +22,20 @@
             %span{:class=>"icon-bar"}
           %a{:class => "navbar-brand", :href => "/"} Go Unsubscribe.me
         %div{:class=>"collapse navbar-collapse"}
-          %ul{:class=>"nav navbar-nav"}
+          %ul{:class=>"nav nav-pills navbar-nav"}
             %li
-              %a{:href=>"/", :"data-toggle"=>"pill"} Home
+              %a{:href=>"/", :"data-toggle"=>"pill"} 
+                %i{:class => "icon-home pull-left"}
+                %span{:class=>"badge pull-right"} #{settings.count}
+                Home 
             %li
-              %a{:href=>"/about", :"data-toggle"=>"pill"} About
+              %a{:href=>"/about", :"data-toggle"=>"pill"}
+                %i{:class => "icon-info-sign pull-left"}
+                About
             %li
-              %a{:href=>"/contact", :"data-toggle"=>"pill"} Contact
+              %a{:href=>"/contact", :"data-toggle"=>"pill"} 
+                %i{:class=>"icon-envelope pull-left"}
+                Contact
           %form{:class=>"navbar-form navbar-left",:role=>"search"}
             %div{:class=>"form-group"}
               %input{:type => "text", :id => "siteName", :class=>"form-control"}

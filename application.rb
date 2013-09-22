@@ -11,6 +11,7 @@ class Application < Sinatra::Base
 
     configure do
         set :views, "#{File.dirname(__FILE__)}/views"
+        set :count, JSON.parse(IO.read("urls.json")).count
     end
 
     
@@ -37,6 +38,10 @@ class Application < Sinatra::Base
 
     get '/about' do
         haml :about
+    end
+    
+    get '/contact' do
+        haml :contact
     end
 
     not_found do

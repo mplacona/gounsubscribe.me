@@ -15,7 +15,7 @@ sorted_object.each do |item|
         #{item["name"]}
     %p
         
-        %div{:class=>"col-lg-9"}
+        %div{:class=>"col-lg-9 "}
             %input{:type=>"text", :class=>"form-control", :id=>"disabledInput", :value=>"#{item["url"]}", :disabled=>"disabled"}
         %button{:type=>"button", :onclick => "openLink('#{item["url"]}')", :class=>"btn btn-default"} open
     EOF
