@@ -21,7 +21,7 @@ window.___gcfg = {lang: 'en-GB'};
     var fb1 = document.createElement('script');
     fb1.type = 'text/javascript';
     fb1.async = true;
-    fb1.src = 'http://connect.facebook.net/en_GB/all.js#xfbml=1', 'facebook-jssdk';
+    fb1.src = 'http://connect.facebook.net/en_GB/all.js#xfbml=1&status=0', 'facebook-jssdk';
     var fb2 = document.getElementsByTagName('script')[0];
     fb2.parentNode.insertBefore(fb1, fb2);
 })();
